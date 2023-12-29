@@ -33,7 +33,7 @@ Cấu hình body parser
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+app.use('/', express.static('/api'))
 /*
 Các routers 
 */
