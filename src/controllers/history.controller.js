@@ -1,4 +1,4 @@
-var History = require('../models/history.model');
+var History = require('../models/history.model.js');
 
 exports.all = function (req, res) {
     var data = req.body;

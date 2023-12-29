@@ -1,4 +1,4 @@
-var User = require('../models/user.model');
+var User = require('../models/user.model.js');
 
 exports.all = function (req, res) {
     var data = req.body;

@@ -1,5 +1,5 @@
 const { domainToUnicode } = require('url');
-const db = require('../../src/commons/connect');
+const db = require('../../src/commons/connect.js');
 
 const Admin = function () {}
 

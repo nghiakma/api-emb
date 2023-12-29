@@ -12,19 +12,7 @@ Cấu hình CORS policy
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
-app.use(cors(
-    {
-        origin: [
-            "http://localhost:3000",
-            "http://127.0.0.1:3000",
-            "http://localhost:3001",
-            "http://127.0.0.1:3001",
-        ],
-        // origin: '*',
-        credentials: true,
-        exposedHeaders: ["set-cookie"],
-    }
-));
+app.use(cors());
 
 
 /*
@@ -33,13 +21,13 @@ Cấu hình body parser
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use('/', express.static('/api'))
+
 /*
 Các routers 
 */
-require('./routers/history.router')(app);
-require('./routers/user.router')(app);
-require('./routers/admin.router')(app);
+require('./routers/history.router.js')(app);
+require('./routers/user.router.js')(app);
+require('./routers/admin.router.js')(app);
 
 app.get('/', (req, res) => {
     // Test Absolute import mapOrde

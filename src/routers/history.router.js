@@ -1,5 +1,5 @@
 module.exports = router = function(router){
-    var history = require('../controllers/history.controller');
+    var history = require('../controllers/history.controller.js');
 
     router.get("/api/history/all/",  history.all);
 

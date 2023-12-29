@@ -1,4 +1,4 @@
-var Admin = require('../models/admin.model');
+var Admin = require('../models/admin.model.js');
 
 
 

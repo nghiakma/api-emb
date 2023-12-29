@@ -1,5 +1,5 @@
 module.exports = router = function(router){
-    var user = require('../controllers/user.controller');
+    var user = require('../controllers/user.controller.js');
 
     router.get("/api/user/all/",  user.all);
 
